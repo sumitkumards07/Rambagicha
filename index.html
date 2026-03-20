@@ -523,12 +523,24 @@
 </div>
 </div>
 </footer>
-<!-- Floating Booking Action -->
+<!-- Floating Booking Action (Right) -->
 <div class="fixed bottom-8 right-8 z-40">
 <button onclick="openModal('General Enquiry')" class="bg-primary text-on-primary h-16 w-16 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform group">
 <span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform">event_available</span>
 <span class="absolute right-20 bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Book Now</span>
 </button>
+</div>
+
+<!-- Floating Contact Actions (Left) -->
+<div class="fixed bottom-8 left-8 z-40 flex flex-col gap-4">
+    <a href="https://wa.me/7419344246?text=Hi, I'm interested in booking a room at Rambagicha Guest House." target="_blank" class="bg-[#25D366] text-white h-14 w-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform animate-float group relative">
+        <span class="material-symbols-outlined text-2xl">chat</span>
+        <span class="absolute left-16 bg-[#25D366] text-white px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-lg">WhatsApp Us</span>
+    </a>
+    <a href="tel:7419344246" class="bg-primary text-white h-14 w-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform group relative">
+        <span class="material-symbols-outlined text-2xl">call</span>
+        <span class="absolute left-16 bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-lg">Call Us</span>
+    </a>
 </div>
 
 <!-- Enquiry Modal -->
