@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rambagicha Guest House | Tirumala Sanctuary</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface": "#0d1c2f",
+              "on-secondary": "#ffffff",
+              "surface-container": "#e6eeff",
+              "on-tertiary-container": "#4e3d00",
+              "surface-tint": "#046BD2",
+              "inverse-surface": "#233144",
+              "tertiary": "#735c00",
+              "inverse-on-surface": "#ebf1ff",
+              "on-primary-container": "#ebefff",
+              "surface-container-low": "#eff4ff",
+              "tertiary-fixed-dim": "#e9c349",
+              "tertiary-fixed": "#ffe088",
+              "secondary-container": "#d5e0f8",
+              "on-error": "#ffffff",
+              "on-secondary-container": "#586377",
+              "on-background": "#0d1c2f",
+              "secondary-fixed-dim": "#bcc7de",
+              "on-tertiary-fixed-variant": "#574500",
+              "primary-fixed-dim": "#aac7ff",
+              "on-primary": "#ffffff",
+              "surface-variant": "#d5e3fd",
+              "outline": "#727784",
+              "on-secondary-fixed-variant": "#3c475a",
+              "on-primary-fixed": "#001b3e",
+              "surface-bright": "#f8f9ff",
+              "error-container": "#ffdad6",
+              "error": "#ba1a1a",
+              "outline-variant": "#c1c6d5",
+              "inverse-primary": "#aac7ff",
+              "surface": "#f8f9ff",
+              "secondary": "#545f73",
+              "on-tertiary": "#ffffff",
+              "primary": "#046BD2",
+              "on-tertiary-fixed": "#241a00",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#d6e3ff",
+              "surface-container-high": "#dde9ff",
+              "background": "#f8f9ff",
+              "surface-container-highest": "#d5e3fd",
+              "primary-container": "#046bd2",
+              "on-error-container": "#93000a",
+              "on-primary-fixed-variant": "#00458d",
+              "on-surface-variant": "#414753",
+              "on-secondary-fixed": "#111c2d",
+              "secondary-fixed": "#d8e3fb",
+              "tertiary-container": "#cca72f",
+              "surface-dim": "#ccdbf4"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "serif"],
+              "body": ["Plus Jakarta Sans", "sans-serif"],
+              "label": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px"},
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'slide-up': 'slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'float': 'float 3s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+              slideUp: { '0%': { transform: 'translateY(30px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+              float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      .stagger-in > * { opacity: 0; transform: translateY(20px); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+      .stagger-in.visible > * { opacity: 1; transform: translateY(0); }
+      .stagger-in > *:nth-child(1) { transition-delay: 0.1s; }
+      .stagger-in > *:nth-child(2) { transition-delay: 0.2s; }
+      .stagger-in > *:nth-child(3) { transition-delay: 0.3s; }
+      
+      .glass-modal { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed-dim">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm flex justify-between items-center px-8 py-4">
+<div class="text-2xl font-headline italic text-primary font-bold">
+            Rambagicha
+        </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 tracking-widest uppercase text-xs" href="#rooms">Rooms</a>
+<a class="text-slate-600 hover:text-primary transition-colors tracking-widest uppercase text-xs" href="#facilities">Facilities</a>
+<a class="text-slate-600 hover:text-primary transition-colors tracking-widest uppercase text-xs" href="#about">About</a>
+<a class="text-slate-600 hover:text-primary transition-colors tracking-widest uppercase text-xs" href="#testimonials">Testimonials</a>
+<a class="text-slate-600 hover:text-primary transition-colors tracking-widest uppercase text-xs" href="#contact">Contact</a>
+</div>
+<button onclick="openModal('General Enquiry')" class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-bold hover:scale-95 duration-200 ease-in-out shadow-lg shadow-primary/20">
+            Book Now
+        </button>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-surface-bright/95 via-surface-bright/60 to-transparent z-10"></div>
+<img alt="Tirumala Temple peaceful courtyard" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA97nE0YlIkXB1MCo9TSV1IGK2parhGBEK9jQvs_TEkb4Me7aAtWx6E-wzVuZaqdr-XMGQQwPQ148IMdz97_gDr22UDU95km0jd4su1AgbA3FPTGhrAR9czUEbdAjd8ZyGb2s81ozxnNd_RSTiAQs5-O7D9Ra_md9SeN8ih1gQMpAusZ1aANcJUqa0sz2M0L0E5bbKvvxfxIKRP1GlvuPG0Q-ICrcWXiAyrbF8PGCMQlJuNKBThPpW4ZInuu5yrt1rYGjwRscx0YQ"/>
+</div>
+<div class="container mx-auto px-8 relative z-20">
+<div class="max-w-2xl">
+<span class="inline-block px-4 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold text-xs tracking-widest uppercase mb-6">A Sanctuary for Pilgrims</span>
+<h1 class="text-6xl md:text-7xl font-headline text-on-surface leading-tight mb-8">Celestial <br/><span class="italic text-primary">Serenity</span></h1>
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 max-w-lg">
+                    Experience tranquility steps away from the divine. Rambagicha Guest House in Tirumala is a peaceful stay option for devotees seeking comfort and spiritual rejuvenation.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button onclick="openModal('General Enquiry')" class="bg-primary text-on-primary px-10 py-4 rounded-lg font-bold shadow-xl shadow-primary/30 hover:scale-105 transition-transform">
+                        Book Your Stay
+                    </button>
+<button class="flex items-center gap-2 px-8 py-4 rounded-lg font-semibold text-primary border border-primary/20 bg-white/50 backdrop-blur-sm hover:bg-white transition-all">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+                        Explore Facilities
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-surface px-8" id="about">
+<div class="container mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div>
+<h2 class="text-4xl font-headline text-on-surface mb-6">About Us</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                            Rambagicha Guest House in Tirumala is a peaceful stay option for devotees. Located conveniently near the main temple, it offers a serene environment for spiritual rejuvenation. Our guest house is dedicated to providing a comfortable and well-maintained atmosphere where pilgrims can find rest and peace.
+                        </p>
+</div>
+<div>
+<h3 class="text-2xl font-headline text-on-surface mb-4">Why Choose Us?</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            We pride ourselves on being a family-friendly stay with helpful support assistance. Our commitment to cleanliness and a peaceful environment ensures that your focus remains on your spiritual journey. With modern essentials like free WIFI and hot water, we bridge the gap between tradition and contemporary comfort.
+                        </p>
+</div>
+</div>
+<div class="rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Guest House Interior" class="w-full h-full object-cover aspect-square" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMp_goAoh--4X69vJgNgKAj1ls5BTFLQ4bI6eoSM4phVF5PphYmYm1FjGFEJNHufP2bs-9zS6GkGzRXCptqxMnvaaZ_drNkp-DFLTzXOflLdCmezAbZh4B5d4HypsqoXH24-MwxFTpk_mpk_oH6pF29BjH9GTyMbd8VS6xkC_gYgHFZxicSt3kNqo98ce1Gi29mtWE46tAaUcp3W8eubZ7GYlrwRz6tIWsSBT-BOs4gAF9It3sLvdF0ooN9T6kHzgOB4WdOGhiIw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Rooms Section -->
+<section class="py-24 bg-surface-container-low px-8" id="rooms">
+<div class="container mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-headline text-on-surface mb-4">Our Peaceful Rooms</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Thoughtfully designed living spaces for a restful haven after your spiritual journey.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Suite Room -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-surface-container">
+<div class="h-64 relative">
+<img alt="Suite Room" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMp_goAoh--4X69vJgNgKAj1ls5BTFLQ4bI6eoSM4phVF5PphYmYm1FjGFEJNHufP2bs-9zS6GkGzRXCptqxMnvaaZ_drNkp-DFLTzXOflLdCmezAbZh4B5d4HypsqoXH24-MwxFTpk_mpk_oH6pF29BjH9GTyMbd8VS6xkC_gYgHFZxicSt3kNqo98ce1Gi29mtWE46tAaUcp3W8eubZ7GYlrwRz6tIWsSBT-BOs4gAF9It3sLvdF0ooN9T6kHzgOB4WdOGhiIw"/>
+<div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Suite</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-headline mb-4">Suite Room</h3>
+<div class="space-y-2 mb-6 text-on-surface-variant text-sm">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">wifi</span> Free WIFI</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">ac_unit</span> AC Room</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">tv</span> LED TV</div>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-2xl font-bold text-primary">₹ 2,250<small class="text-sm font-normal text-on-surface-variant">/Night</small></span>
+<button onclick="openModal('Suite Room')" class="bg-primary text-white px-4 py-2 rounded font-bold text-sm">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Deluxe Room -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-surface-container">
+<div class="h-64 relative">
+<img alt="Deluxe Room" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT-P95lQBjfXaLL_jCRdz57qTMhxkXg7WyfKvgnZV-pJYIUpHM5L-XvolPxH22I3eSC9oK5E47upHb3bB6KX_eJKrWTfLC4JXnHv8v5fGSkrXU2qiszp6x0N7NlHHPiRbFPp_L6gavOE7hjybRr90eOf5BpNaQIspaM4aSNcQEyP8j7npuW7sw26iFagkuVQYoFWgoDmauf7qgpfIWPbQHq5xd2_szudMhW1rwAc8s6vVRfQA5Tahx1WXYfgQCKAC0hEgzrg2M5w"/>
+<div class="absolute top-4 right-4 bg-primary/80 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Deluxe</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-headline mb-4">Deluxe Room</h3>
+<div class="space-y-2 mb-6 text-on-surface-variant text-sm">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">wifi</span> Free WIFI</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">ac_unit</span> AC Room</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">tv</span> LED TV</div>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-2xl font-bold text-primary">₹ 1,500<small class="text-sm font-normal text-on-surface-variant">/Night</small></span>
+<button onclick="openModal('Deluxe Room')" class="bg-primary text-white px-4 py-2 rounded font-bold text-sm">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Standard Room -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-surface-container">
+<div class="h-64 relative">
+<img alt="Standard Room" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqTwITWXd3eZuekc1jE6CGKD04PRxaaDcWiTV03u0gJLHMJCSmd2TLKfpTRUB1UDppr80i7tVVBBNamxBNyqonO_RHfdP5G-0l2JOXMNdtuj_JPIe0BW5gpAzo2gv3qoQCSFNw-A3iV9GXGvnn5oforWU7fgf6VKWnN1fo5V6C17lNp4c1hrzdkRswqvEkwchbAMptaW_3WoP771egS4GpyPX2DMqLses_ZULjkCvU-fKqxysYuustVgEkGYJOEAYtwAv0auVajg"/>
+<div class="absolute top-4 right-4 bg-slate-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Standard</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-headline mb-4">Standard Room</h3>
+<div class="space-y-2 mb-6 text-on-surface-variant text-sm">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">wifi</span> Free WIFI</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">mode_fan</span> Non-AC</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">tv</span> LED TV</div>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-2xl font-bold text-primary">₹ 1,450<small class="text-sm font-normal text-on-surface-variant">/Night</small></span>
+<button onclick="openModal('Standard Room')" class="bg-primary text-white px-4 py-2 rounded font-bold text-sm">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Facilities Section -->
+<section class="py-24 bg-surface px-8" id="facilities">
+<div class="container mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="text-4xl font-headline text-on-surface mb-6">Guest Facilities</h2>
+<p class="text-on-surface-variant">Everything we offer is curated to ensure a peaceful and convenient stay for our pilgrim guests.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Facility 1 -->
+<div class="bg-surface-container-low p-8 rounded-xl flex items-start gap-5 hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">cleaning_services</span>
+</div>
+<div>
+<h4 class="text-xl font-bold font-headline mb-2">Clean & Well-Maintained Rooms</h4>
+<p class="text-on-surface-variant text-sm">Spotless environments with high standards of hygiene for your peace of mind.</p>
+</div>
+</div>
+<!-- Facility 2 -->
+<div class="bg-surface-container-low p-8 rounded-xl flex items-start gap-5 hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">eco</span>
+</div>
+<div>
+<h4 class="text-xl font-bold font-headline mb-2">Peaceful Environment</h4>
+<p class="text-on-surface-variant text-sm">A quiet and calm atmosphere perfect for spiritual reflection and rest.</p>
+</div>
+</div>
+<!-- Facility 3 -->
+<div class="bg-surface-container-low p-8 rounded-xl flex items-start gap-5 hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">hot_tub</span>
+</div>
+<div>
+<h4 class="text-xl font-bold font-headline mb-2">Hot Water Facility</h4>
+<p class="text-on-surface-variant text-sm">24/7 access to hot water for refreshing ritual baths.</p>
+</div>
+</div>
+<!-- Facility 4 -->
+<div class="bg-surface-container-low p-8 rounded-xl flex items-start gap-5 hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">support_agent</span>
+</div>
+<div>
+<h4 class="text-xl font-bold font-headline mb-2">Helpful Support Assistance</h4>
+<p class="text-on-surface-variant text-sm">Our staff is always ready to guide you through your pilgrimage needs.</p>
+</div>
+</div>
+<!-- Facility 5 -->
+<div class="bg-surface-container-low p-8 rounded-xl flex items-start gap-5 hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">family_restroom</span>
+</div>
+<div>
+<h4 class="text-xl font-bold font-headline mb-2">Family-Friendly Stay</h4>
+<p class="text-on-surface-variant text-sm">Safe and comfortable rooms designed for families traveling together.</p>
+</div>
+</div>
+<!-- Facility 6 -->
+<div class="bg-surface-container-low p-8 rounded-xl flex items-start gap-5 hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">location_on</span>
+</div>
+<div>
+<h4 class="text-xl font-bold font-headline mb-2">Convenient Location</h4>
+<p class="text-on-surface-variant text-sm">Strategically located just minutes away from the main temple complex.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-surface-container-low px-8" id="testimonials">
+<div class="container mx-auto">
+<h2 class="text-4xl font-headline text-on-surface mb-16 text-center">Devotee Experiences</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="testimonial-container">
+<!-- Testimonial 1 -->
+<div class="bg-white p-10 rounded-2xl shadow-sm border border-surface-container flex flex-col h-full">
+<div class="flex text-tertiary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-8 flex-grow leading-relaxed">"Nice place to stay at the hill top... walkable distance from gnc to this guest house... neat and tidy place to stay... rooms are very nice."</p>
+<div class="flex items-center gap-4 border-t pt-6">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">SV</div>
+<div>
+<h5 class="font-bold">Sri Vatsan</h5>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-10 rounded-2xl shadow-sm border border-surface-container flex flex-col h-full">
+<div class="flex text-tertiary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-8 flex-grow leading-relaxed">"Best room in Tirumala hills very neat and clean near walk in distance in gnc parking and bus stand also best and clean bathroom."</p>
+<div class="flex items-center gap-4 border-t pt-6">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">SK</div>
+<div>
+<h5 class="font-bold">Santosh Kumar</h5>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white p-10 rounded-2xl shadow-sm border border-surface-container flex flex-col h-full">
+<div class="flex text-tertiary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-8 flex-grow leading-relaxed">"Very clean rooms and nice location. Helpful support from the guest house staff made our darshan trip very smooth."</p>
+<div class="flex items-center gap-4 border-t pt-6">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">HM</div>
+<div>
+<h5 class="font-bold">Hariprasath M</h5>
+</div>
+</div>
+</div>
+<!-- Testimonial 4 -->
+<div class="bg-white p-10 rounded-2xl shadow-sm border border-surface-container flex flex-col h-full">
+<div class="flex text-tertiary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-8 flex-grow leading-relaxed">"Family friendly and very safe. The environment is so peaceful, perfect for a spiritual stay in Tirumala."</p>
+<div class="flex items-center gap-4 border-t pt-6">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">CN</div>
+<div>
+<h5 class="font-bold">Chelva Nithya</h5>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 bg-surface px-8" id="faq">
+<div class="container mx-auto max-w-3xl">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-headline text-on-surface mb-4">Frequently Asked Questions</h2>
+<p class="text-on-surface-variant">Common queries to help you plan your spiritual stay better.</p>
+</div>
+<div class="space-y-4">
+<!-- FAQ 1 -->
+<div class="group border border-surface-container rounded-2xl overflow-hidden transition-all hover:shadow-md bg-white">
+<button class="w-full px-8 py-6 text-left flex justify-between items-center bg-white hover:bg-surface-container-low transition-colors" onclick="toggleFaq(this)">
+<span class="font-bold text-lg">What are the check-in and check-out timings?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-[.active]:rotate-180">expand_more</span>
+</button>
+<div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out group-[.active]:max-h-96">
+<div class="px-8 pb-6 text-on-surface-variant leading-relaxed">
+                            Our standard check-in time is 12:00 PM and check-out is 11:00 AM. We offer flexible timings based on room availability for devotees arriving early.
+                        </div>
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="group border border-surface-container rounded-2xl overflow-hidden transition-all hover:shadow-md bg-white">
+<button class="w-full px-8 py-6 text-left flex justify-between items-center bg-white hover:bg-surface-container-low transition-colors" onclick="toggleFaq(this)">
+<span class="font-bold text-lg">Is the guest house near the main temple?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-[.active]:rotate-180">expand_more</span>
+</button>
+<div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out group-[.active]:max-h-96">
+<div class="px-8 pb-6 text-on-surface-variant leading-relaxed">
+                            Yes, Rambagicha Guest House is strategically located within walking distance of the main temple complex, near the GNC toll gate.
+                        </div>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="group border border-surface-container rounded-2xl overflow-hidden transition-all hover:shadow-md bg-white">
+<button class="w-full px-8 py-6 text-left flex justify-between items-center bg-white hover:bg-surface-container-low transition-colors" onclick="toggleFaq(this)">
+<span class="font-bold text-lg">How can I book a room?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-[.active]:rotate-180">expand_more</span>
+</button>
+<div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out group-[.active]:max-h-96">
+<div class="px-8 pb-6 text-on-surface-variant leading-relaxed">
+                            You can book by clicking the "Book Now" button on our website, which will connect you to our reception via WhatsApp for instant confirmation.
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Location & Contact -->
+<section class="py-24 bg-surface px-8" id="contact">
+<div class="container mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="rounded-2xl overflow-hidden h-[500px] shadow-lg relative group border border-surface-container">
+<img alt="Map view of Tirumala location" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9gy0DNlaIGJ1ZIBsQcDZc8cEvvU9ZC3XQzZVnazMlgT2cMiN0cGy-vEg8il5go-MQvjWPLcxkoDwQqHjskd9FLR2JzeO947Hd8hczvbX34GSa6ySa6Vs6w6R8EiOw2Nf1dWv0qiJJdJj8S_86YjQ1PjDf8-Vfp3fN_5p8ctjjizIwq0d5yNCcCmjvXHH7JdPHXvLFh7-z2npJzP_hkV5egFdw-zSesYW49lw7ldgHhWhxQWOFtEBZY4r7Cn1Clrs_LPMNDTR35g"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-primary text-white p-4 rounded-full shadow-2xl animate-pulse">
+<span class="material-symbols-outlined text-4xl">location_on</span>
+</div>
+</div>
+<div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-6 rounded-xl shadow-xl">
+<h4 class="font-bold text-lg mb-1">Rambagicha Guest House</h4>
+<p class="text-sm text-on-surface-variant">Main Temple Road, Near GNC Toll Gate, Tirumala</p>
+</div>
+</div>
+<div class="lg:pl-12">
+<h2 class="text-4xl font-headline text-on-surface mb-8">Connect With Us</h2>
+<div class="space-y-8 mb-12">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1">Reception Desk</p>
+<p class="text-xl font-semibold">+91 74193 44246</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-[#25D366] flex-shrink-0">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1">WhatsApp Booking</p>
+<p class="text-xl font-semibold">+91 74193 44246</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1">Email Inquiry</p>
+<p class="text-xl font-semibold">stay@rambagicha.com</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">directions</span>
+                            Directions
+                        </button>
+<button onclick="openModal('General Enquiry')" class="bg-white border-2 border-primary text-primary py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary/5 transition-all">
+<span class="material-symbols-outlined">book_online</span>
+                            Book Now
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-950 text-slate-300 w-full py-16 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2">
+<div class="text-3xl font-headline italic text-white mb-6">Rambagicha</div>
+<p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                    Rambagicha Guest House in Tirumala is a peaceful stay option for devotees. Your spiritual residence dedicated to comfort and devotion.
+                </p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#rooms">Room Categories</a></li>
+<li><a class="hover:text-primary transition-colors" href="#facilities">Guest Facilities</a></li>
+<li><a class="hover:text-primary transition-colors cursor-pointer" onclick="openPolicy('cancellation')">Cancellation Policy</a></li>
+<li><a class="hover:text-primary transition-colors cursor-pointer" onclick="openPolicy('privacy')">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Connect</h4>
+<div class="flex gap-4 mb-6">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">photo_camera</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">share</span>
+</div>
+<p class="text-xs text-slate-500">© 2024 Rambagicha Guest House. <br/>All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<!-- Floating Booking Action -->
+<div class="fixed bottom-8 right-8 z-40">
+<button onclick="openModal('General Enquiry')" class="bg-primary text-on-primary h-16 w-16 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform group">
+<span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform">event_available</span>
+<span class="absolute right-20 bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Book Now</span>
+</button>
+</div>
+
+<!-- Enquiry Modal -->
+<div id="bookingModal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in">
+    <div class="bg-white w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl animate-slide-up relative">
+        <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 transition-colors">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="p-8 md:p-10">
+            <h3 class="text-3xl font-headline text-on-surface mb-2">Book Your Stay</h3>
+            <p class="text-on-surface-variant mb-8">Fill in your details and we'll connect with you on WhatsApp for confirmation.</p>
+            
+            <form id="enquiryForm" class="space-y-5">
+                <input type="hidden" id="roomType" value="General Enquiry">
+                <div>
+                    <label class="block text-sm font-bold text-on-surface mb-2 tracking-wide uppercase">Your Name</label>
+                    <input type="text" id="userName" required class="w-full px-5 py-4 bg-surface-container-low border-transparent rounded-xl focus:border-primary focus:bg-white focus:ring-0 transition-all text-on-surface" placeholder="Enter your full name">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-bold text-on-surface mb-2 tracking-wide uppercase">Check-in</label>
+                        <input type="date" id="checkIn" required class="w-full px-5 py-4 bg-surface-container-low border-transparent rounded-xl focus:border-primary focus:bg-white focus:ring-0 transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-on-surface mb-2 tracking-wide uppercase">Check-out</label>
+                        <input type="date" id="checkOut" required class="w-full px-5 py-4 bg-surface-container-low border-transparent rounded-xl focus:border-primary focus:bg-white focus:ring-0 transition-all">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-on-surface mb-2 tracking-wide uppercase">Phone Number</label>
+                    <input type="tel" id="userPhone" required class="w-full px-5 py-4 bg-surface-container-low border-transparent rounded-xl focus:border-primary focus:bg-white focus:ring-0 transition-all" placeholder="Enter mobile number">
+                </div>
+                <button type="button" onclick="sendToWhatsApp()" class="w-full bg-primary text-on-primary py-5 rounded-2xl font-bold text-lg shadow-xl shadow-primary/20 hover:scale-[1.02] transition-all flex items-center justify-center gap-3 mt-4">
+                    <span class="material-symbols-outlined">send</span> Send Enquiry via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Policy Modal (Generic) -->
+<div id="policyModal" class="fixed inset-0 z-[70] hidden flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-md animate-fade-in">
+    <div class="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl animate-slide-up relative">
+        <button onclick="closePolicyModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 transition-colors">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="p-8 md:p-12 max-h-[80vh] overflow-y-auto no-scrollbar">
+            <h3 id="policyTitle" class="text-3xl font-headline text-on-surface mb-8">Policy</h3>
+            <div id="policyContent" class="prose prose-slate max-w-none text-on-surface-variant leading-relaxed space-y-4">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleFaq(button) {
+        const item = button.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.group').forEach(el => el.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+    }
+
+    function openModal(room = 'General Enquiry') {
+        document.getElementById('roomType').value = room;
+        document.getElementById('bookingModal').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        document.getElementById('bookingModal').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Modal click outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('bookingModal');
+        const policyModal = document.getElementById('policyModal');
+        if (event.target == modal) closeModal();
+        if (event.target == policyModal) closePolicyModal();
+    }
+
+    function sendToWhatsApp() {
+        const name = document.getElementById('userName').value;
+        const phone = document.getElementById('userPhone').value;
+        const checkIn = document.getElementById('checkIn').value;
+        const checkOut = document.getElementById('checkOut').value;
+        const room = document.getElementById('roomType').value;
+
+        if (!name || !phone || !checkIn || !checkOut) {
+            alert('Please fill all required fields');
+            return;
+        }
+
+        const message = `*Room Booking Enquiry*\n------------------\n*Room Type:* ${room}\n*Name:* ${name}\n*Phone:* ${phone}\n*Check-in:* ${checkIn}\n*Check-out:* ${checkOut}\n------------------\nPlease confirm availability.`;
+        const waNumber = '7419344246'; // Updated as per user request
+        const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+    }
+
+    const policies = {
+        privacy: {
+            title: "Privacy Policy",
+            content: "We value your privacy. Your personal information provided during booking is used solely for reservation purposes and is not shared with third parties without your consent. We implement industry-standard security measures to protect your data."
+        },
+        terms: {
+            title: "Terms & Conditions",
+            content: "By booking a stay at Rambagicha Guest House, you agree to our house rules. We maintain a strict no-smoking and no-alcohol policy within the premises to maintain the sanctity of Tirumala. Guests are required to carry valid ID proof."
+        },
+        cancellation: {
+            title: "Cancellation Policy",
+            content: "Cancellations made 48 hours prior to check-in are eligible for a full refund. Cancellations within 24-48 hours will incur a 50% charge. No-shows or cancellations within 24 hours of arrival are non-refundable."
+        }
+    };
+
+    function openPolicy(type) {
+        const policy = policies[type];
+        document.getElementById('policyTitle').innerText = policy.title;
+        document.getElementById('policyContent').innerHTML = `<p>${policy.content}</p>`;
+        document.getElementById('policyModal').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closePolicyModal() {
+        document.getElementById('policyModal').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.stagger-in').forEach(el => observer.observe(el));
+</script>
+</body></html>
