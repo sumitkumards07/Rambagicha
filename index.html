@@ -506,10 +506,10 @@
 <div>
 <h4 class="text-white font-bold mb-6">Quick Links</h4>
 <ul class="space-y-3 text-sm">
-<li><a class="hover:text-primary transition-colors" href="#rooms">Room Categories</a></li>
-<li><a class="hover:text-primary transition-colors" href="#facilities">Guest Facilities</a></li>
-<li><a class="hover:text-primary transition-colors cursor-pointer" onclick="openPolicy('cancellation')">Cancellation Policy</a></li>
+<li><a class="hover:text-primary transition-colors cursor-pointer" onclick="openPolicy('terms')">Terms & Conditions</a></li>
+<li><a class="hover:text-primary transition-colors cursor-pointer" onclick="openPolicy('cancellation')">Refund Policy</a></li>
 <li><a class="hover:text-primary transition-colors cursor-pointer" onclick="openPolicy('privacy')">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors cursor-pointer" onclick="openPolicy('disclaimer')">Disclaimer</a></li>
 </ul>
 </div>
 <div>
@@ -648,11 +648,21 @@
         },
         terms: {
             title: "Terms & Conditions",
-            content: "By booking a stay at Rambagicha Guest House, you agree to our house rules. We maintain a strict no-smoking and no-alcohol policy within the premises to maintain the sanctity of Tirumala. Guests are required to carry valid ID proof."
+            content: `1. <strong>Identity Proof:</strong> Valid Government ID (Aadhar, Voter ID, Passport) is mandatory for all guests at check-in.<br><br>
+                      2. <strong>Pilgrim Conduct:</strong> As this is a holy place, smoking, alcohol consumption, and non-vegetarian food are strictly prohibited within the premises.<br><br>
+                      3. <strong>Occupancy:</strong> Room occupancy must not exceed the specified limit. Extra persons will be charged accordingly.<br><br>
+                      4. <strong>Check-in/Out:</strong> Standard check-in is 12:00 PM and check-out is 11:00 AM.`
         },
         cancellation: {
-            title: "Cancellation Policy",
-            content: "Cancellations made 48 hours prior to check-in are eligible for a full refund. Cancellations within 24-48 hours will incur a 50% charge. No-shows or cancellations within 24 hours of arrival are non-refundable."
+            title: "Cancellation & Refund Policy",
+            content: `1. <strong>Full Refund:</strong> Cancellations made more than 48 hours before check-in time are eligible for a 100% refund.<br><br>
+                      2. <strong>Partial Refund:</strong> Cancellations made between 24 and 48 hours before check-in will incur a 50% deduction.<br><br>
+                      3. <strong>No Refund:</strong> Cancellations made within 24 hours of check-in, or no-shows, are strictly non-refundable.<br><br>
+                      4. <strong>Processing Time:</strong> Eligible refunds will be processed within 7-10 working days to the original payment source.`
+        },
+        disclaimer: {
+            title: "Disclaimer",
+            content: "Rambagicha Guest House is a private accommodation facility facilitating devotees. We are not the official TTD (Tirumala Tirupati Devasthanams) booking portal. We provide assistance and comfortable stay options for pilgrims based on availability and our private management policies."
         }
     };
 
