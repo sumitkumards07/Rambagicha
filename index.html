@@ -630,13 +630,17 @@
     }
 
     function openModal(room = 'General Enquiry') {
+        const modal = document.getElementById('bookingModal');
         document.getElementById('roomType').value = room;
-        document.getElementById('bookingModal').classList.remove('hidden');
+        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
-        document.getElementById('bookingModal').classList.add('hidden');
+        const modal = document.getElementById('bookingModal');
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
         document.body.style.overflow = 'auto';
     }
 
@@ -693,14 +697,18 @@
 
     function openPolicy(type) {
         const policy = policies[type];
+        const modal = document.getElementById('policyModal');
         document.getElementById('policyTitle').innerText = policy.title;
         document.getElementById('policyContent').innerHTML = `<p>${policy.content}</p>`;
-        document.getElementById('policyModal').classList.remove('hidden');
+        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
     }
 
     function closePolicyModal() {
-        document.getElementById('policyModal').classList.add('hidden');
+        const modal = document.getElementById('policyModal');
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
         document.body.style.overflow = 'auto';
     }
 
